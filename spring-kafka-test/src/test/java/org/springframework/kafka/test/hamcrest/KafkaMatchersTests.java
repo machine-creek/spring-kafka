@@ -40,7 +40,7 @@ public class KafkaMatchersTests {
 	@Test
 	public void testKeyMatcher() {
 		ConsumerRecord<String, String> record = new ConsumerRecord<>("topic", 0, 10, 1487694048607L,
-				TimestampType.CREATE_TIME,2 , 3, "key1", "value1", new RecordHeaders(), Optional.empty());
+				TimestampType.CREATE_TIME, 2, 3, "key1", "value1", new RecordHeaders(), Optional.empty());
 		assertThat(record, hasKey("key1"));
 		assertThat(record, hasValue("value1"));
 		assertThat(record, hasPartition(0));
